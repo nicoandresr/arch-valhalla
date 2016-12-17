@@ -1,2 +1,2 @@
 # arch-valhalla
-Arch linux rest api server to serve config files.
+Arch linux rest api client to serve config files.
