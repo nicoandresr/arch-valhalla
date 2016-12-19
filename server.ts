@@ -1,4 +1,6 @@
 import * as express from "express"
+import * as cors from "cors";
+import { Routes } from "./routes";
 
 class Server {
 
@@ -6,13 +8,21 @@ class Server {
 
     constructor(port: number){
         this.setupServer();
+        this.enableCors();
 
-        this._app.listen(port);
+        this._app.listen(port, () => console.log("Listen on port: "+ port));
     }
 
     private setupServer(): void {
         this._app = express();
-        this._app.get("/", (req, res) => res.send("hola mundo"));
+
+        let routes = new Routes();
+        this._app.use("/", routes); 
+    }
+
+    private enableCors(): void {
+       let options = { origin: "*" };
+       this._app.use(cors(options));
     }
 }
 
