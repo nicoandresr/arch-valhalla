@@ -4,6 +4,7 @@
   "description": "Arch linux rest api client to serve config files.",
   "main": "compiled/server.js",
   "scripts": {
+    "start": "tsc && node compiled/server.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
