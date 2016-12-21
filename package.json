@@ -4,7 +4,7 @@
   "description": "Arch linux rest api client to serve config files.",
   "main": "compiled/server.js",
   "scripts": {
-    "start": "tsc && node compiled/server.js", 
+    "start": "tsc && node compiled/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +25,8 @@
   "dependencies": {
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "typescript": "^2.1.4"
   },
   "devDependencies": {
     "@types/cors": "0.0.33",
