@@ -5,7 +5,7 @@
   "main": "compiled/server.js",
   "engines": { "node": "7.3.0", "npm": "4.0.5" },
   "scripts": {
-    "start": "npm run tsc && node compiled/server.js",
+    "start": "npm run tsc && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc"
   },
