@@ -31,4 +31,4 @@ class Server {
     }
 }
 
-new Server(process.env.port | 5001);
+new Server(process.env.port || 5001);
