@@ -2,7 +2,7 @@
   "name": "arch-valhalla",
   "version": "1.0.0",
   "description": "Arch linux rest api client to serve config files.",
-  "main": "compiled/server.js",
+  "main": "server.js",
   "engines": { "node": "7.3.0", "npm": "4.0.5" },
   "scripts": {
     "start": "npm run tsc && node server.js",
@@ -28,9 +28,7 @@
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "request": "^2.79.0",
-    "typescript": "^2.1.4"
-  },
-  "devDependencies": {
+    "typescript": "^2.1.4",
     "@types/cors": "0.0.33",
     "@types/express": "^4.0.34"
   }
