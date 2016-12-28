@@ -14,6 +14,8 @@ class Server {
 
     private setupServer(): void {
         this._app = express();
+
+        this._app.get("/", (req, res) => res.send("Wellcome to arch-valhalla server!"));
         
         let routes = new Routes().config();
         this._app.use("/", routes); 
