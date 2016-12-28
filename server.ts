@@ -14,9 +14,9 @@ class Server {
 
     private setupServer(): void {
         this._app = express();
-        this._app.get('/', (req, res) => res.send('hola mundo'));
-        //let routes = new Routes().config();
-        //this._app.use("/", routes); 
+        
+        let routes = new Routes().config();
+        this._app.use("/", routes); 
     }
 
     private enableCors(): void {
