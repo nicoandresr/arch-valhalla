@@ -6,12 +6,12 @@ var Server = (function () {
     function Server(_port) {
         this._port = _port;
         this.setupServer();
-        this.enableCors();
+        //this.enableCors();
         this.runServer();
     }
     Server.prototype.setupServer = function () {
         this._app = express();
-        this._app.get("/", function (req, res) { return res.send("Wellcome to arch-valhalla server!"); });
+        this._app.get("/", function (req, res) { return res.sendFile(__dirname + "/README.md"); });
         var routes = new routes_1.Routes().config();
         this._app.use("/", routes);
     };
@@ -27,4 +27,4 @@ var Server = (function () {
     };
     return Server;
 }());
-new Server(process.env.port || 5001);
+new Server(process.env.PORT || 5001);
